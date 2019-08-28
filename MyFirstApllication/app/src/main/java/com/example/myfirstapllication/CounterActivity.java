@@ -25,37 +25,33 @@ public class CounterActivity extends Activity {
 
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(CounterActivity.this,CounterActivity.class);
-                startActivity(intent);
                 MediaPlayer ring= MediaPlayer.create(CounterActivity.this,R.raw.one_plus);
                 ring.start();
                 try{
-                 //   Intent intent1=new Intent(CounterActivity.this,CounterActivity.class);
-                  //  startActivity(intent1);
-                String cs=String.valueOf(mcounter.getText());
-                int c=Integer.parseInt(cs.toString());
-                c=c+1;
-                cs= Integer.toString(c);
-                mcounter.setText(cs);}catch (Exception e){
+                 int c= Integer.parseInt(mcounter.getText().toString())+1;
+                 ring.stop();
+                mcounter.setText(Integer.toString(c));
+                }catch (Exception e){
                    System.out.println(e);
                }
+
             }
 
         });
         msubtract.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                CharSequence cs=mcounter.getText();
-                int c=Integer.parseInt(cs.toString());
-                if(c>0) {
-                    c = c - 1;
-                    cs = Integer.toString(c);
-                    mcounter.setText(cs);
+
+                try{
+                    int c= Integer.parseInt(mcounter.getText().toString())-1;
+                    if(c>0)
+                    mcounter.setText(Integer.toString(c));
+                    else
+                        mcounter.setText(Integer.toString(0));
+                }catch (Exception e){
+                    System.out.println(e);
                 }
-                else {
-                    cs= Integer.toString(0);
-                    mcounter.setText(cs);
-                }
+
             }
 
         });

@@ -8,5 +8,5 @@
     <!--round button color -->
     <color name="btn_round_color">#17B47F</color>
     <!--splash screen color-->
-    <color name="color_screen_splash">#47C1FA </color>
+    <color name="color_screen_splash">#D9FA85   </color>
 </resources>

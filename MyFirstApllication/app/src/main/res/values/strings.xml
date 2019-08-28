@@ -8,4 +8,5 @@
     <string name="et_login_password">Enter Password</string>
     <!-- For Counter page -->
     <string name="counter_string">your Counter</string>
+
 </resources>

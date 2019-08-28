@@ -1,14 +1,12 @@
 package com.example.myfirstapllication;
 import android.app.Activity;
-import android.media.AudioManager;
-import android.media.MediaPlayer;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
 public class SplashActivity extends Activity {
 
-    Handler handler;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +20,7 @@ public class SplashActivity extends Activity {
                 SplashActivity.this.startActivity(mainIntent);
                 SplashActivity.this.finish();
             }
-            },3000);
+            },5000);
 
     }
 }
